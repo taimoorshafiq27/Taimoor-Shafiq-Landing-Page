@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/dist/output.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/33dd5b12e7.js" crossorigin="anonymous"></script>
+    <script defer src="/dist/app.js"></script>
+    <title>Taimoor Shafiq Landing Page</title>
+</head>
+<body class="bg-slate-50">
+    <section class="bg-sky-600 h-20"><!-- nav start -->
+        <nav class="flex justify-between p-8">
+            <img src="#" class="text-6xl">
+            <div x-data="{id: 1}">
+                <a href="#" @click="$dispatch('open-dropdown',{id})"><i class="fa-solid fa-bars text-2xl"></i></a>
+            </div>
+        </nav>
+    </section>
+
+    <!-- hidden menu start -->
+    <div class="bg-sky-500" x-data="{ open: false }"
+    x-show="open"
+    @open-dropdown.window="if ($event.detail.id == 1) open = true"
+    @click.away="open = false"
+    x-transition.opacity.duration.250>
+        <nav class="flex flex-col items-stretch text-xl text-center text-white">
+            <a href="#" class="pb-1 hover:bg-sky-600 transition duration-200 ease-in">Home</a>
+            <a href="#" class="pb-1 pt-1 hover:bg-sky-600 transition duration-200 ease-in">About</a>
+            <a href="#" class="pb-1 pt-1 hover:bg-sky-600 transition duration-200 ease-in">Services</a>
+            <a href="#" class="pb-1 pt-1 hover:bg-sky-600 transition duration-200 ease-in">Portfolio</a>
+            <a href="#" class="pt-1 hover:bg-sky-600 transition duration-200 ease-in">Contact me</a>
+        </nav>
+    </div>
+
+    <section class="h-80"><!-- hero start -->
+        <div class="text-center">
+            <h2 class="text-xl pt-20">I am</h2>
+            <h1 class="text-6xl">Taimoor Shafiq </h1>
+            <h2 class="text-xl mt-3">And This is my Developer Portfolio</h2>
+        </div>
+        <div class="text-center pt-10">
+            <button class="bg-sky-500 text-sky-50 rounded-lg w-32 h-12 hover:bg-sky-400 transition duration-200 ease-in">Portfolio</button>
+        </div>
+    </section>
+
+    <section><!-- socials start -->
+        <div class="flex justify-center pt-10">
+            <i class="fa-brands fa-github text-5xl pr-12"></i>
+            <i class="fa-brands fa-linkedin text-5xl"></i>
+            <i class="fa-brands fa-youtube text-5xl pl-12"></i>
+        </div>
+    </section>
+
+    <section class="bg-sky-500 text-white mt-48"><!-- about start -->
+        <div class="flex justify-center">
+            <div class="p-32">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio assumenda pariatur incidunt temporibus expedita ullam explicabo dolore alias ipsa ratione tempora harum qui commodi consequuntur laboriosam, voluptate, beatae quos illo.</p>
+            </div>
+            <div>
+                <i class="fa-brands fa-github text-5xl pr-12"></i>
+            </div>
+        </div>
+    </section>
+
+    <section class="h-96 pt-8 pb-8"><!-- portfolio start -->
+        <div class="flex flex-wrap ml-12 mt-6 mr-12 gap-8">
+            <div class="shadow-md w-96 rounded-md"><!-- portfolio-card -->
+                <img src="/dist/img/muffin-screenshot.jpg" alt="project-thumbnail" class="bg-cover">
+                <h2 class="text-xl mt-8 ml-2 font-extrabold text-sky-600">E-commerce Frontend/Backend</h2>
+                <h3 class="text-base mt-4 ml-2">'mazin muffin's owners needed a platform to sell their muffins! I created a website for them, one with a shopping basket and checkout</h3>
+            </div>
+            <div class="shadow-md w-96 rounded-md"><!-- portfolio-card -->
+                <img src="/dist/img/muffin-screenshot.jpg" alt="project-thumbnail" class="bg-cover">
+                <h2 class="text-xl mt-8 ml-2 font-extrabold text-sky-600">E-commerce Frontend/Backend</h2>
+                <h3 class="text-base mt-4 ml-2">'mazin muffin's owners needed a platform to sell their muffins! I created a website for them, one with a shopping basket and checkout</h3>
+            </div>
+            <div class="shadow-md w-96 rounded-md"><!-- portfolio-card -->
+                <img src="/dist/img/muffin-screenshot.jpg" alt="project-thumbnail" class="bg-cover">
+                <h2 class="text-xl mt-8 ml-2 font-extrabold text-sky-600">E-commerce Frontend/Backend</h2>
+                <h3 class="text-base mt-4 ml-2">'mazin muffin's owners needed a platform to sell their muffins! I created a website for them, one with a shopping basket and checkout</h3>
+            </div>
+            <div class="shadow-md w-96 rounded-md"><!-- portfolio-card -->
+                <img src="/dist/img/muffin-screenshot.jpg" alt="project-thumbnail" class="bg-cover">
+                <h2 class="text-xl mt-8 ml-2 font-extrabold text-sky-600">E-commerce Frontend/Backend</h2>
+                <h3 class="text-base mt-4 ml-2">'mazin muffin's owners needed a platform to sell their muffins! I created a website for them, one with a shopping basket and checkout</h3>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
+
+<!-- TO DO -->
+<!-- change focus/active styling on hamburger button -->
+<!-- add transition to individual menu items -->
+<!-- change focus/active styling on Projects button -->
+<!-- change styling when highlighting text -->
+<!-- put a max-width for the hero section on large screens and above-->
+<!-- try different font -->
+<!-- line height -->
+<!-- tracking -->
+<!-- project cards need rounded top, atm the image is squaring off --> 
